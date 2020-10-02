@@ -5,6 +5,7 @@ import Register from '../pages/register'
 import Forget from '../pages/forget'
 import Login from '../pages/login'
 import Index from '../pages/index'
+import Home from '../components/Home'
 Vue.use(Router)
 const  router = new Router({
   mode:'history',
@@ -17,6 +18,15 @@ const  router = new Router({
         isLogin:true,//需要登录
       },
       component: Index
+    },
+    {
+      //主页
+      path: '/home',
+      name: 'Home',
+      meta:{
+        isLogin:true,//需要登录
+      },
+      component: Home
     },
     {
       //注册

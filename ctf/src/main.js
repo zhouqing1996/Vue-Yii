@@ -48,7 +48,7 @@ router.beforeEach((to,from,next)=>{
     {
       console.log("已经登录过了，先退出登录")
     }
-    next('/')
+    next('/home')
   }
   else {
     if(to.meta.isLogin){

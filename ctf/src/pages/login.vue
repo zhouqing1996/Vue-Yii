@@ -46,7 +46,7 @@
             this.$store.dispatch('login',res.data.data)
             this.$store.dispatch('slogin',res.data.data)
             alert(message)
-            this.$router.push({path:'/'})
+            this.$router.push({path:'/home',params:{username:this.loginForm.username,password:this.loginForm.password}})
             console.log(this.$store.getters.getsToken)
           }
           else if(message=="该用户不存在")
